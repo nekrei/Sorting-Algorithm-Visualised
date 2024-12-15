@@ -1,0 +1,16 @@
+void qSort(int begin, int end){
+    if(begin<end){
+        int pivot = begin;
+        int pval = a[end];
+        for(int i=begin; i<= end; i++){
+            comp(i,end,"<");
+            if(a[i]< pval){
+                swap(i,pivot);
+                pivot++; 
+            }
+        }
+        swap(end,pivot);
+        qSort(begin, pivot-1);
+        qSort(pivot+1, end);
+    }
+}

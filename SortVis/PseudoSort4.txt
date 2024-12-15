@@ -1,0 +1,22 @@
+void mSort(int begin, int end){
+    if(begin<end){
+        int m = (end+begin)/2;
+        mSort(begin,m);
+        mSort(m+1, end);
+        int p[end-begin+1];
+        int i=begin, j=m+1, pos=0;
+        while(i<=m || j<=end){
+            if(i>m) p[pos] = a[j++];
+            else if(j>end) p[pos] = a[i++]; 
+            else{
+                int min = comp(i,j,"<");
+                p[pos] = a[min];
+                if(min==i) i++;
+                else j++;
+            }
+            pos++;
+        }
+        for(i=begin; i<=end; i++) 
+            a[i] = p[i-begin];
+    }
+}

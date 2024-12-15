@@ -1,0 +1,7 @@
+for(i=0; i<n;i++){
+    min = i;
+    for(j=i; j<n; j++){
+        min = comp(j,min,"<");
+    }
+    swap(min,i);
+}

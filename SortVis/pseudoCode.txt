@@ -1,0 +1,9 @@
+for(i=0; i<n;i++){
+        min = i;
+        for(j=i; j<n; j++){
+            comp(pos,pos)   min = (a[min]>a[j])? j : min;
+            printf("%d %d %d\n",i,j, min);
+        }
+        printf("%d %d %d\n",i,j, min);
+        swap(pos,pos)      int t = a[min]; a[min] = a[i]; a[i] = t;
+    }
